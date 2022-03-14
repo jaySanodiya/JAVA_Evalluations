@@ -1,20 +1,38 @@
 package com.Question02;
 
+import java.util.Objects;
 import java.util.Scanner;
 
 public class StringManipulator {
     public String removeVowels(String input){
-        String[] vowels = {"a","e","i","o","u"};
-        String[] array = new String[input.length()];
-        char[] chr = input.toCharArray();
-
-
-        for(char c:chr){
-            if(true){
-
-            }
+        if(input==null){
+            return "null";
         }
-        return  "welcome";
+        else{
+            String[] vowels = {"a","e","i","o","u"};
+            String[] array = new String[input.length()];
+            char[] chr = input.toCharArray();
+
+
+
+            for(int i=0;i<input.length();i++){
+                int count = 0;
+                for(int j=0;j<5;j++){
+                    if(vowels[j].toCharArray()[0] == chr[i]){
+                        array[i]="";
+                        break;
+                    }
+                    else{
+                        count++;
+                    }
+                }
+
+                if(count==5){
+                    array[i] = String.valueOf(chr[i]);
+                }
+            }
+            return  String.join("", array);
+        }
     }
 
     public static void main(String[] args) {
