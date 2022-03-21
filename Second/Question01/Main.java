@@ -1,8 +1,4 @@
-package com.Question01;
-
-import com.Question01.ClassTwo;
-import com.Question01.InterfaceOne;
-import com.Question01.InterfaceThree;
+package com.Second.Question01;
 
 public class Main {
     public static void main(String[] args) {

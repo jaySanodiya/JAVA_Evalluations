@@ -1,4 +1,4 @@
-package com.Question03;
+package com.Second.Question03;
 
 import java.util.Scanner;
 

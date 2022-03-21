@@ -1,6 +1,5 @@
-package com.Question02;
+package com.Second.Question02;
 
-import java.util.Objects;
 import java.util.Scanner;
 
 public class StringManipulator {
