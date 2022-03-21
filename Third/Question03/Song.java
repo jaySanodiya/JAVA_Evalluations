@@ -15,7 +15,7 @@ public class Song {
     }
 
     public void play(){
-        System.out.println(songName + " of " + movieName + " is playing...");
+        System.out.println( movieName+ " of " +songName  + " is playing...");
     }
 
     @Override

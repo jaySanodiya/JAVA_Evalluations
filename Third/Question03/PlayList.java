@@ -37,5 +37,9 @@ public class PlayList {
             pl.addSong(song);
         }
 
+        for (Song son:pl.songs) {
+
+            son.play();
+        }
     }
 }
