@@ -20,3 +20,4 @@ public class ExceptionalHandeling {
   finally keyword is used with try catch block, whether try works or not,  catch works or not, if we are using finally then it will definatly works.
     */
 }
+

@@ -1,0 +1,11 @@
+                 MULTITHREADING
+
+* DeadLock :- when program is not able to access the class due to some restriction
+              it will not be able to end so this situation is known as deadlock situation;
+
+* Occur    :- when there are two or more class with Synchronised methods and they are interdependent
+              on each other i,e they are calling each other from inside and we are using Multithreading
+              to run our program faster then Deadlock will occur;
+              To avoid Multithreading we can make any class  non synchronise.
+
+
