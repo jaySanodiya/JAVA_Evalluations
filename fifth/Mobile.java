@@ -1,27 +1,50 @@
 package com.fifth;
 
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.*;
+import java.util.stream.Stream;
 
 public class Mobile {
+
+    HashMap<String, ArrayList<String>> mobiles = new HashMap<>();
+
     public String addMobile(String company, String model) {
 
-        //this method will take a string as a company name and its model as an //argument.
-        //ex: "apple", "Iphone13"
-        //add the company as key and its model as an element of ArrayList in the above //mobiles HashMap.
-        //if the company name already exists then their model should be added to the //existing list.
-        //This method should return a message "Mobile added successfully" after //adding a mobile.
+        Set<Map.Entry<String ,ArrayList<String>>> set= mobiles.entrySet();
+        ArrayList<String> value = (ArrayList<String>) set.stream().map(s->{
+            if(s.getKey()==company)
+                return s.getValue();
+            else return null;
+        });
+        value.add(model);
+        mobiles.put(company,value );
+
+        return  "Mobile added successfully";
     }
 
     public ArrayList<String> getModels(String company){
+        Set<Map.Entry<String ,ArrayList<String>>> set= mobiles.entrySet();
+        ArrayList<String> list = (ArrayList<String>) set.stream().map(s->{
+            if(s.getKey()==company)
+                return s.getValue();
+            else return null;
+        });
+
+        return list;
         //This method return the list of all the models of the supplied company
         //if we supply any invalid company name then it should return null value
     }
 
     public static void main(String[] args) {
 
-        HashMap<String, ArrayList<String>> mobiles = new HashMap<>();
 
 
+        Mobile mobile = new Mobile();
+//        String res = mobile.addMobile("apple","Iphone13");
+
+//        System.out.println(res);
+
+        ArrayList<String> list = mobile.getModels("apple");
+
+        list.stream().forEach(s-> System.out.println(s));
     }
 }
